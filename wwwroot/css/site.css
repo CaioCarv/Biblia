@@ -1,0 +1,236 @@
+/* Paleta padrão (Bege) */
+:root {
+    --primary-bg: #FAF4E8;
+    --secondary-bg: #FFFDF7;
+    --primary-text: #5C4A33;
+    --secondary-text: #7A5E42;
+    --button-bg: #7A5E42;
+    --button-hover-bg: #5C4A33;
+    --navbar-bg: #7A5E42;
+    --navbar-text: #FFFFFF;
+    --footer-bg: #FAF4E8;
+    --footer-text: #5C4A33;
+}
+
+    /* Paleta azul bebê (pastel claro) */
+    :root.theme-blue {
+        --primary-bg: #EAFBFF; /* Azul bebê mais claro */
+        --secondary-bg: #F4FDFF; /* Fundo ainda mais suave */
+        --primary-text: #547A84; /* Azul bem suave para o texto */
+        --secondary-text: #6D9CA7; /* Azul claro para botões e destaques */
+        --button-bg: #6D9CA7; /* Azul suave para botões */
+        --button-hover-bg: #547A84; /* Azul mais escuro no hover */
+        --navbar-bg: #6D9CA7;
+        --navbar-text: #FFFFFF;
+        --footer-bg: #EAFBFF;
+        --footer-text: #547A84;
+    }
+
+    /* Paleta rosa pastel claro */
+    /* Paleta rosa pastel (mais rosa) */
+    :root.theme-pink {
+        --primary-bg: #FFE6F0; /* Rosa pastel mais vibrante */
+        --secondary-bg: #FFF0F7; /* Fundo ainda mais delicado */
+        --primary-text: #A85678; /* Rosa claro, verdadeiro para texto */
+        --secondary-text: #C77494; /* Rosa pastel suave para botões e destaques */
+        --button-bg: #C77494; /* Rosa vibrante para botões */
+        --button-hover-bg: #A85678; /* Rosa um pouco mais escuro no hover */
+        --navbar-bg: #C77494;
+        --navbar-text: #FFFFFF;
+        --footer-bg: #FFE6F0;
+        --footer-text: #A85678;
+        -footer-text: #7A4B57;
+    }
+
+.btn-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+    .btn-theme:hover {
+        transform: scale(1.1);
+    }
+
+    .btn-theme.active {
+        border-color: var(--button-bg);
+        background-color: var(--secondary-bg);
+        transform: scale(1.3);
+    }
+
+    .btn-theme.inactive {
+        background-color: white;
+    }
+
+.icon-theme {
+    font-size: 1.5rem;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.btn-theme.active .icon-theme {
+    color: var(--button-bg);
+}
+
+.btn-theme.inactive .icon-theme {
+    color: #c0c0c0;
+}
+
+
+/* Layout Flexbox para os Botões */
+.theme-buttons {
+    margin-top: 20px;
+}
+
+
+
+/* Corpo Principal */
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da janela */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Área principal para crescer dinamicamente */
+main {
+    flex: 1; /* Faz com que a área principal cresça para ocupar o espaço disponível */
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    filter: invert(100%);
+}
+
+/* Ajustes para alinhar a imagem ao lado do texto */
+/*.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    padding: 20px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    gap: 10px;
+}*/
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+    align-items: center!important;
+    justify-content: center!important;
+}
+
+:root.theme-default .image-section img {
+    filter: none; /* Volta à aparência original */
+}
+
+    .image-section img {
+        max-width: 80%; /* Ajusta o tamanho da imagem */
+        height: 25rem;
+        border-radius: 0; /* Remove bordas arredondadas */
+        margin-left: 15rem; /* Aproxima da seção de texto */
+    }
+
+
+.welcome-text {
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Georgia', serif;
+}
+
+.big-title {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--secondary-text);
+    transition: color 0.3s ease;
+    position: relative; /* Permite ajustes precisos */
+    top: 5rem; /* Move o texto para baixo */
+}
+
+
+
+.big-title-2 {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--secondary-text);
+    transition: color 0.3s ease;
+    margin-left: 10rem; /* Remove margens que podem atrapalhar o alinhamento */
+    position: relative; /* Permite ajustes precisos */
+    top: 2rem; /* Move o texto para baixo */
+}
+
+    .content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.explanation {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--primary-text);
+    max-width: 400px;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.custom-button {
+    padding: 0.3rem 4rem;
+    font-size: 1.5rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .custom-button:hover {
+        background-color: var(--button-hover-bg);
+        transform: scale(1.05);
+    }
+
+.footer {
+    background-color: var(--footer-bg, #FAF4E8);
+    color: var(--footer-text, #5C4A33);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Garante que o footer grude ao final */
+}

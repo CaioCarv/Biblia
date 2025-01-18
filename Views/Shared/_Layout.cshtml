@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OSeuDev</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark" style="background-color: var(--secondary-text); padding: 10px 20px;">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand fw-bold text-white" asp-area="" asp-controller="Home" asp-action="Index">
+                    oSeuDev
+                </a>
+                <div class="theme-buttons d-flex justify-content-center align-items-center gap-3">
+                    <button class="btn btn-theme" onclick="setTheme('default', this)" title="Tema Bege">
+                        <i class="icon-theme fa fa-cross" style="color: #5A462F;"></i>
+                    </button>
+
+                    <button class="btn btn-theme" onclick="setTheme('blue', this)" title="Tema Azul Clarinho">
+                        <i class="icon-theme fa fa-water" style="color: #3A6C78;"></i>
+                    </button>
+
+                    <button class="btn btn-theme" onclick="setTheme('pink', this)" title="Tema Rosa Clarinho">
+                        <i class="icon-theme fa fa-spa" style="color: #B35D72;"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2025 - Oseu
+        </div>
+    </footer>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/bibliaApi.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model dynamic
+@{
+    ViewData["Title"] = "Lista de Bíblias";
+}
+
+<h1>Lista de Bíblias Disponíveis</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Idioma</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.data != null)
+        {
+            foreach (var bible in Model.data)
+            {
+                <tr>
+                    <td>@bible.id</td>
+                    <td>@bible.name</td>
+                    <td>@bible.description</td>
+                    <td>@bible.language.name</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">Nenhuma Bíblia disponível.</td>
+            </tr>
+        }
+    </tbody>
+</table>

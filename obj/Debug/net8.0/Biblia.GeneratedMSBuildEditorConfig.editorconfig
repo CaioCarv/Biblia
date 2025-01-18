@@ -1,0 +1,48 @@
+is_global = true
+build_property.RefitInternalNamespace = Biblia
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Biblia
+build_property.RootNamespace = Biblia
+build_property.ProjectDir = C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/Biblia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXEJpYmxpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/BibliaApi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXEJpYmxpYUFwaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/obterTraducao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXG9idGVyVHJhZHVjYW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
