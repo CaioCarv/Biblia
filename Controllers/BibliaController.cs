@@ -1,92 +1,52 @@
-using Biblia.Integracao.Interfaces;
-using Biblia.Integracao.Response;
-using Biblia.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using Biblia.Models;
+using Biblia.Data.Repository;
 
 namespace Biblia.Controllers
 {
     public class BibliaController : Controller
     {
-        private readonly HttpClient _httpClient;
-        private readonly IBibliaIntegracao _bibliaIntegracao;
+        private readonly MySqlRepository _repository;
 
-        public BibliaController(IBibliaIntegracao bibliaIntegracao)
+        // Construtor que inicializa o repositório
+        public BibliaController()
         {
-            _bibliaIntegracao = bibliaIntegracao;
+            string connectionString = "Server=localhost;Database=Bible;User ID=root;Password=Mayra@027;";
+            _repository = new MySqlRepository(connectionString);
         }
 
-        [HttpGet("{biblia}")]
-        public async Task<ActionResult<BibliaResponse>> ListarBibliaVersiculo(string biblia)
+        // Método para exibir os detalhes de um livro
+        [HttpGet]
+        public IActionResult Livro()
         {
-            var responseData = await _bibliaIntegracao.ObterDadosBiblia(biblia);
-
-            if (responseData == null)
+            // Inicializa o modelo do livro
+            LivroModel livro = new LivroModel
             {
-                return BadRequest("Livro não encontrado!");
-            }
+                ID = 1,                // ID do Livro
+                Nome = "Gênesis"       // Nome do Livro
+            };
 
-            return Ok(responseData);
+            // Retorna a view "Livro.cshtml" passando o modelo como parâmetro
+            return View("/Views/Livro/Livro.cshtml", livro);
         }
 
-
-        //public BibliaController(HttpClient httpClient)
-        //{
-        //    _httpClient = httpClient;
-
-        //    // Adicione a chave da API diretamente no cabeçalho
-        //    _httpClient.DefaultRequestHeaders.Add("api-key", "241828a2e9f4def2387d9b2c82519e11"); // Substitua pela sua chave
-        //}
-
-        public async Task<IActionResult> ObterTraducao()
+        // Método para exibir uma lista de livros
+        [HttpGet]
+        public IActionResult Livros()
         {
-            var bibleId = "90799bb5b996fddc-01"; // ID da tradução específica
-            var url = $"https://api.scripture.api.bible/v1/bibles/{bibleId}";
-
-            // Requisição para a API
-            var response = await _httpClient.GetAsync(url);
-
-            if (!response.IsSuccessStatusCode)
+            // Inicializa uma lista de livros
+            var livros = new List<LivroModel>
             {
-                // Retorna uma página de erro caso a requisição falhe
-                return View("Error");
-            }
+                new LivroModel { ID = 1, Nome = "Gênesis" },
+                new LivroModel { ID = 2, Nome = "Êxodo" },
+                new LivroModel { ID = 3, Nome = "Levítico" },
+                new LivroModel { ID = 4, Nome = "Números" },
+                new LivroModel { ID = 5, Nome = "Deuteronômio" }
+                // Adicione os demais livros aqui
+            };
 
-            // Processa a resposta JSON
-            var jsonResponse = await response.Content.ReadAsStringAsync();
-            var bibleDetails = JObject.Parse(jsonResponse);
-
-            // Passa os detalhes da tradução para a view
-            return View("ObterTraducao", bibleDetails);
+            // Retorna a view "Livros.cshtml" passando a lista de livros como parâmetro
+            return View("/Views/Livro/Livros.cshtml", livros);
         }
-
-        public IActionResult Biblia()
-        {
-            BibliaModel biblia = new BibliaModel();
-
-            biblia.IdLivro = 1;
-            biblia.Livro = "Genesis";
-            biblia.Capitulo = 1;
-            biblia.Versiculo = 23;
-            
-            return View("/Views/Biblia/Biblia.cshtml", biblia);
-        }
-
-        //public IActionResult Usuario()
-        //{
-        //    UsuarioModel usuario = new UsuarioModel();
-
-        //    usuario.Id = 1;
-        //    usuario.Nome = "Genesis";
-        //    usuario.Email = "caio@gmail.com";
-
-        //    return View(usuario);
-        //}   
-        
-        
-        
     }
-
 }
-

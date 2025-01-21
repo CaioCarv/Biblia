@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\images\\biblia.png"
     },
     {
-      "Id": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\js\\bibliaApi.js",
-      "PackagePath": "staticwebassets\\js\\bibliaApi.js"
-    },
-    {
       "Id": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

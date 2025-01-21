@@ -1,5 +1,4 @@
 is_global = true
-build_property.RefitInternalNamespace = Biblia
 build_property.TargetFramework = net8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
@@ -23,12 +22,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXEJpYmxpYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/BibliaApi.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXEJpYmxpYUFwaS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/obterTraducao.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXG9idGVyVHJhZHVjYW8uY3NodG1s
+[C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Biblia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmlibGlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/caiof/source/repos/ProjetoBiblia/Biblia/Biblia/Views/Shared/_Layout.cshtml]

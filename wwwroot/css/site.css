@@ -234,3 +234,14 @@ main {
     padding: 10px;
     margin-top: auto; /* Garante que o footer grude ao final */
 }
+
+/* MODAL */
+
+.modal-dialog {
+    margin-top: 0; /* Remove margens superiores */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta o fundo escuro */
+}

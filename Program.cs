@@ -1,27 +1,14 @@
-using Biblia.Integracao;
-using Biblia.Integracao.Interfaces;
-using Biblia.Integracao.Refit;
-using Refit;
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Adiciona suporte para controladores com views
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient();
-builder.Services.AddScoped<IBibliaIntegracao, BibliaIntegracao>();
 
-
-builder.Services.AddRefitClient<IBibliaIntegracaoRefit>().ConfigureHttpClient(b =>
-{
-    b.BaseAddress = new Uri("https://bible.com.br");
-});
-
+// Configuração do aplicativo
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Biblia/Index");
+    app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 
@@ -31,8 +18,14 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Biblia/Biblia");
+    return Task.CompletedTask;
+});
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Biblia}/{action=ObterTraducao}/{id?}");
+    pattern: "{controller=Biblia}/{action=Index}/{id?}");
 
 app.Run();

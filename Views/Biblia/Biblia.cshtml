@@ -1,4 +1,4 @@
-﻿@model BibliaModel
+﻿@model Biblia.Models.BibliaModel
 @{
     ViewData["Title"] = "Biblia";
 }
@@ -8,26 +8,47 @@
         Bem-vindo ao seu devocional diário
     </div>
 
-        <div class="left-title">
-            <h1 class="big-title">oSeu</h1>
-            <h1 class="big-title-2">Dev.</h1>
-        </div>
-        <div class="content-container">
-            <button class="custom-button">Começar Devocional</button>
-            <p class="explanation">
-                Este projeto é uma ferramenta devocional que auxilia no sorteio de livros ou capítulos da Bíblia para leitura,
-                oferecendo inspiração diária. Ele permite sortear um livro completo,
-                um capítulo específico dentro de um livro escolhido ou até um capítulo aleatório de toda a Bíblia,
-                promovendo uma experiência dinâmica e enriquecedora para o estudo bíblico.
-            </p>
+    <div class="left-title">
+        <h1 class="big-title">oSeu</h1>
+        <h1 class="big-title-2">Dev.</h1>
+    </div>
+    <div class="content-container">
+        <!-- Botão que abre o modal -->
+        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#devocionalModal">Começar Devocional</button>
+        <p class="explanation">
+            Este projeto é uma ferramenta devocional que auxilia no sorteio de livros ou capítulos da Bíblia para leitura,
+            oferecendo inspiração diária. Ele permite sortear um livro completo,
+            um capítulo específico dentro de um livro escolhido ou até um capítulo aleatório de toda a Bíblia,
+            promovendo uma experiência dinâmica e enriquecedora para o estudo bíblico.
+        </p>
 
-            <div class="col-md-6 image-section">
-                <img src="~/images/biblia.png" alt="Bíblia Devocional">
-            </div>
-            
+        <div class="col-md-6 image-section">
+            <img src="~/images/biblia.png" alt="Bíblia Devocional">
         </div>
-
+    </div>
 </div>
 
-
-
+<!-- Modal -->
+<div class="modal fade" id="devocionalModal" tabindex="-1" aria-labelledby="devocionalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <!-- Classe 'modal-dialog-centered' adicionada -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="devocionalModalLabel">Começar Devocional</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Selecionar Livro aleatorio:</p>
+                <button type="button" class="btn btn-random" data-bs-dismiss="modal">Livrio</button>
+                <p>Selecionar Livro e Capitulo aleatorio:</p>
+                <button type="button" class="btn btn-random" data-bs-dismiss="modal">Livrio</button>
+                <h3>Livro: @Model.Livro</h3>
+                <p>Capítulo: @Model.Capitulo</p>
+                <p>Versículo: @Model.Versiculo</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
