@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nDOo1HsdTOI=",
+  "dgSpecHash": "fBfHs7zp9us=",
   "success": true,
-  "projectFilePath": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
+  "projectFilePath": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caiof\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\caiof\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

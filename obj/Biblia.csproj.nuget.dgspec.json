@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {}
+    "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {
+    "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
+        "projectUniqueName": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
         "projectName": "Biblia",
-        "projectPath": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
+        "projectPath": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
         "packagesPath": "C:\\Users\\caiof\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\obj\\",
+        "outputPath": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caiof\\AppData\\Roaming\\NuGet\\NuGet.Config",
