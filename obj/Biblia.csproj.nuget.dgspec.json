@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {}
+    "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {}
   },
   "projects": {
-    "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {
+    "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
+        "projectUniqueName": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
         "projectName": "Biblia",
-        "projectPath": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
+        "projectPath": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\Biblia.csproj",
         "packagesPath": "C:\\Users\\caiof\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\obj\\",
+        "outputPath": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caiof\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CoPilot.ORM": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.1.0, )"
