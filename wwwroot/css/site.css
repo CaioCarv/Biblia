@@ -240,8 +240,146 @@ main {
 .modal-dialog {
     margin-top: 0; /* Remove margens superiores */
     transform: translateY(-50%); /* Centraliza verticalmente */
+
 }
 
 .modal-backdrop {
     background-color: rgba(0, 0, 0, 0.5); /* Ajusta o fundo escuro */
+}
+
+
+/* Estilização para os botões dentro do modal */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contêiner dos botões para alinhamento */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Estilização dos botões */
+.btn-random {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, var(--button-bg) 30%, var(--button-hover-bg) 100%);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+    /* Ícone dentro do botão */
+    .btn-random i {
+        font-size: 1rem;
+    }
+
+    /* Efeito ao passar o mouse */
+    .btn-random:hover {
+        background: linear-gradient(135deg, var(--button-hover-bg) 30%, var(--primary-text) 100%);
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Adicionando um efeito suave de clique */
+    .btn-random:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Centraliza o modal corretamente no meio da tela */
+.modal-dialog {
+    max-width: 700px; /* Mantém um tamanho fixo para evitar mudanças abruptas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante que ele fique centralizado na vertical */
+}
+
+/* Evita que o modal se mova para cima ao abrir */
+.modal.fade .modal-dialog {
+    transform: translate(0, 0) !important;
+}
+
+
+/* Estilização do título do modal */
+.modal-title {
+    font-size: 2.8rem; /* Aumenta o tamanho da fonte */
+    font-family: 'Playfair Display', serif; /* Fonte elegante e tranquila */
+    text-align: center; /* Alinha o título ao centro */
+    width: 100%; /* Garante que a centralização funcione */
+    font-weight: bold; /* Deixa o título mais destacado */
+    color: var(--primary-text); /* Usa a cor do tema */
+    padding: 10px 0; /* Adiciona um pequeno espaçamento */
+}
+
+/* Estilização do resultado do sorteio */
+.resultado-sorteio, .resumo-texto {
+    font-size: 1.5rem; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Quando o resultado for exibido */
+.show-resultado {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Efeito de transição para suavizar a exibição */
+.modal-content {
+    transition: all 0.5s ease-in-out; /* Anima o crescimento */
+}
+
+/* Área do resultado com animação de entrada */
+#resultadoSorteio {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+    /* Quando o resultado estiver visível */
+    #resultadoSorteio.show {
+        opacity: 1;
+        max-height: 100px; /* Ajuste conforme necessário */
+    }
+
+/* Aumentando o tamanho dos botões */
+.btn-random {
+    padding: 15px 30px;
+    font-size: 1.3rem;
 }

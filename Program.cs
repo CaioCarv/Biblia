@@ -1,6 +1,16 @@
+using Biblia.Data.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Adiciona suporte para controladores com views
+builder.Services.AddScoped<MySqlRepository>(provider =>
+{
+    var configuration = provider.GetRequiredService<IConfiguration>();
+    var logger = provider.GetRequiredService<ILogger<MySqlRepository>>(); // Adicionando o logger
+    string connectionString = configuration.GetConnectionString("DefaultConnection");
+    return new MySqlRepository(connectionString, logger);
+});
+
 builder.Services.AddControllersWithViews();
 
 // Configuração do aplicativo
@@ -12,6 +22,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -20,7 +31,7 @@ app.UseAuthorization();
 
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/Biblia/Biblia");
+    context.Response.Redirect("/Biblia");
     return Task.CompletedTask;
 });
 

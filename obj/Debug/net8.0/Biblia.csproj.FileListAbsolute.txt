@@ -53,3 +53,4 @@ C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\obj\Debug\net8.0\refint\
 C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\obj\Debug\net8.0\Biblia.pdb
 C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\obj\Debug\net8.0\Biblia.genruntimeconfig.cache
 C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\obj\Debug\net8.0\ref\Biblia.dll
+C:\Users\caiof\source\repos\ProjetoBiblia\Biblia\Biblia\bin\Debug\net8.0\CoPilot.ORM.dll
