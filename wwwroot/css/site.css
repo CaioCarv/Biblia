@@ -1,3 +1,6 @@
+/* ============================= */
+/* PALETA DE CORES */
+/* ============================= */
 :root {
     --primary-bg: #FAF4E8;
     --secondary-bg: #FFFDF7;
@@ -11,187 +14,74 @@
     --footer-text: #5C4A33;
 }
 
+    /* Tema Azul */
     :root.theme-blue {
-        --primary-bg: #EAFBFF; 
-        --secondary-bg: #F4FDFF; 
-        --primary-text: #547A84; 
-        --secondary-text: #6D9CA7; 
-        --button-bg: #6D9CA7; 
-        --button-hover-bg: #547A84; /
+        --primary-bg: #EAFBFF;
+        --secondary-bg: #F4FDFF;
+        --primary-text: #547A84;
+        --secondary-text: #6D9CA7;
+        --button-bg: #6D9CA7;
+        --button-hover-bg: #547A84;
         --navbar-bg: #6D9CA7;
         --navbar-text: #FFFFFF;
         --footer-bg: #EAFBFF;
         --footer-text: #547A84;
     }
 
+    /* Tema Rosa */
     :root.theme-pink {
-        --primary-bg: #FFE6F0; 
-        --secondary-bg: #FFF0F7; 
+        --primary-bg: #FFE6F0;
+        --secondary-bg: #FFF0F7;
         --primary-text: #A85678;
-        --secondary-text: #C77494; 
-        --button-bg: #C77494; 
+        --secondary-text: #C77494;
+        --button-bg: #C77494;
         --button-hover-bg: #A85678;
         --navbar-bg: #C77494;
         --navbar-text: #FFFFFF;
         --footer-bg: #FFE6F0;
         --footer-text: #A85678;
-        -footer-text: #7A4B57;
     }
 
-/* Footer */
-.site-footer {
-    background-color: var(--footer-bg) !important;
-    color: var(--footer-text) !important;
-    text-align: center !important;
-    padding: 20px !important;
-    width: 100% !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    font-family: 'Georgia', serif !important;
-    font-size: 1rem !important;
-    transition: background-color 0.3s ease, color 0.3s ease !important;
-}
+/* ============================= */
+/* ESTRUTURA GERAL DO SITE */
+/* ============================= */
 
-/* Mantém o footer no final da página */
-body {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 100vh !important;
-}
-
-main {
-    flex: 1 !important;
-}
-
-/* Mensagem Inspiradora */
-.footer-message {
-    font-size: 1.2rem !important;
-    font-style: italic !important;
-    margin-bottom: 10px !important;
-    color: var(--secondary-text) !important;
-}
-
-/* Links do Footer */
-.footer-links {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    margin-bottom: 10px !important;
-}
-
-    .footer-links a {
-        color: var(--primary-text) !important;
-        text-decoration: none !important;
-        font-weight: bold !important;
-        transition: color 0.3s ease-in-out !important;
-    }
-
-        .footer-links a:hover {
-            color: var(--button-bg) !important;
-            text-decoration: underline !important;
-        }
-
-/* Direitos Autorais */
-.footer-copyright {
-    font-size: 0.9rem !important;
-    opacity: 0.8 !important;
-    color: var(--secondary-text) !important;
-}
-
-
-/* Botão Fechar - Vermelho */
-.btn-close-modal {
-    background-color: #d9534f !important; /* Vermelho padrão */
-    border: none !important;
-    color: white !important;
-    font-weight: bold !important;
-    padding: 10px 20px !important;
-    border-radius: 6px !important;
-    transition: background-color 0.3s ease, transform 0.2s ease !important;
-    font-size: 1rem !important;
-}
-
-    /* Efeito Hover */
-    .btn-close-modal:hover {
-        background-color: #c9302c !important; /* Vermelho mais escuro */
-        transform: scale(1.05) !important;
-    }
-
-    /* Efeito quando pressionado */
-    .btn-close-modal:active {
-        background-color: #a72824 !important;
-        transform: scale(0.98) !important;
-    }
-
-.btn-theme {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    cursor: pointer;
+.container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
 }
 
-    .btn-theme i {
-        font-size: 1.1rem;
-    }
-
-    .btn-theme.active {
-        border-color: var(--button-bg);
-        background-color: var(--secondary-bg);
-        transform: scale(1.2);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-theme.inactive {
-        background-color: transparent;
-        border-color: transparent;
-    }
-
-
-
-.icon-theme {
-    font-size: 1.1rem;
-    transition: transform 0.2s ease, color 0.3s ease;
+.div-geral {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
-.btn-theme.active .icon-theme {
-    color: var(--button-bg);
-}
-
-.btn-theme.inactive .icon-theme {
-    color: #c0c0c0;
-}
-
-
-.theme-buttons {
-    margin-top: 20px;
-}
-
-
-
-body {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-    font-family: 'Georgia', serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; 
-    min-height: 100vh; 
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Georgia', serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    justify-content: space-between;
 }
 
-/* Área principal para crescer dinamicamente */
 main {
     flex: 1;
+    padding-bottom: 80px;
 }
 
+/* ============================= */
+/* HEADER & NAVBAR */
+/* ============================= */
 .navbar {
     background-color: var(--navbar-bg);
     color: var(--navbar-text);
@@ -206,67 +96,39 @@ main {
     font-family: 'Georgia', serif;
 }
 
-.navbar-toggler {
-    border: none;
-    background-color: transparent;
-}
-
-.navbar-toggler-icon {
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
-    filter: invert(100%);
-}
-
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    transition: filter 0.3s ease;
-    align-items: center!important;
-    justify-content: center!important;
-}
-
-:root.theme-default .image-section img {
-    filter: none;
-}
-
-    .image-section img {
-        max-width: 80%; 
-        height: 25rem;
-        border-radius: 0; 
-        margin-left: 15rem; 
-    }
-
-
+/* ============================= */
+/* TÍTULOS E TEXTOS */
+/* ============================= */
 .welcome-text {
     text-align: center;
     font-size: 4rem;
     font-family: 'Georgia', serif;
+    align-self: flex-start;
+}
+
+
+.big-title, .big-title-2 {
+    text-align: left;
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--secondary-text);
+    transition: color 0.3s ease;
+    position: relative;
 }
 
 .big-title {
-    text-align: left;
-    font-size: 6rem;
-    font-weight: bold;
-    color: var(--secondary-text);
-    transition: color 0.3s ease;
-    position: relative; 
-    top: 5rem; 
+    top: 5rem;
 }
-
-
 
 .big-title-2 {
-    text-align: left;
-    font-size: 6rem;
-    font-weight: bold;
-    color: var(--secondary-text);
-    transition: color 0.3s ease;
-    margin-left: 10rem; 
-    position: relative; 
-    top: 2rem; 
+    margin-left: 10rem;
+    top: 2rem;
 }
 
-    .content-container {
+/* ============================= */
+/* CONTAINER GERAL */
+/* ============================= */
+.content-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -275,19 +137,22 @@ main {
     padding: 0;
 }
 
+/* Ajusta a explicação */
 .explanation {
     font-size: 1.4rem;
-    line-height: 2; 
+    line-height: 2;
     color: var(--primary-text);
-    max-width: 500px; 
-    font-family: 'Merriweather', 'Georgia', serif; 
+    max-width: 500px;
+    font-family: 'Merriweather', 'Georgia', serif;
     transition: color 0.3s ease;
-    margin: 20px auto; 
+    margin: 20px auto;
     padding: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/*Button Iniciar Devocional*/
+/* ============================= */
+/* BOTÃO "COMEÇAR DEVOCIONAL" */
+/* ============================= */
 .custom-button {
     padding: 0.4rem 4rem;
     font-size: 1.5rem;
@@ -295,57 +160,54 @@ main {
     background-color: var(--button-bg);
     color: white;
     border: none;
-    border-radius: 8px; 
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px auto;
 }
 
-    /* Efeito ao passar o mouse */
     .custom-button:hover {
         background-color: var(--button-hover-bg);
         transform: scale(1.07);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    /* Efeito ao clicar */
-    .custom-button:active {
-        transform: scale(0.96);
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+/* ============================= */
+/* IMAGEM DA BÍBLIA */
+/* ============================= */
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 20px;
+}
+
+    .image-section img {
+        max-width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 
+/* Responsividade da imagem */
+@media (max-width: 768px) {
+    .image-section img {
+        max-width: 40%;
+    }
 
-.footer {
-    background-color: var(--footer-bg, #FAF4E8);
-    color: var(--footer-text, #5C4A33);
-    text-align: center;
-    padding: 10px;
-    margin-top: auto; 
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-/* MODAL */
-
-.modal-dialog {
-    margin-top: 0; 
-    transform: translateY(-50%); 
-}
-
-.modal-backdrop {
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-
-/* Estilização para os botões dentro do modal */
-.modal-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Contêiner dos botões para alinhamento */
+/* ============================= */
+/* BOTÕES DE SORTEIO */
+/* ============================= */
 .button-container {
     display: flex;
     justify-content: center;
@@ -353,7 +215,6 @@ main {
     margin-top: 15px;
 }
 
-/* Estilização dos botões */
 .btn-random {
     padding: 15px 25px;
     font-size: 1rem;
@@ -363,208 +224,216 @@ main {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
     background: linear-gradient(135deg, var(--button-bg) 30%, var(--button-hover-bg) 100%);
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     gap: 8px;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
-    /* Ícone dentro do botão */
-    .btn-random i {
-        font-size: 1rem;
-    }
-
-    /* Efeito ao passar o mouse */
     .btn-random:hover {
         background: linear-gradient(135deg, var(--button-hover-bg) 30%, var(--primary-text) 100%);
         transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    /* Adicionando um efeito suave de clique */
-    .btn-random:active {
-        transform: scale(0.98);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* ============================= */
+/* MODAL */
+/* ============================= */
+.modal-content {
+    transition: all 0.5s ease-in-out;
 }
 
-/* Centraliza o modal corretamente no meio da tela */
-.modal-dialog {
-    max-width: 700px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; 
-
-/* Evita que o modal se mova para cima ao abrir */
-.modal.fade .modal-dialog {
-    transform: translate(0, 0) !important;
-}
-
-
-/* Estilização do título do modal */
 .modal-title {
-    font-size: 2.8rem; 
-    font-family: 'Playfair Display', serif; 
-    text-align: center; 
-    width: 100%; 
-    font-weight: bold; 
-    color: var(--primary-text); 
+    font-size: 2.8rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-text);
     padding: 10px 0;
 }
 
-.resultado-sorteio, .resumo-texto {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--secondary-text);
-    background-color: var(--secondary-bg);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0; 
-    transform: translateY(-20px); 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.show-resultado {
-    opacity: 1; 
-    transform: translateY(0);
-
-
-
-/* Efeito de transição para suavizar a exibição */
-.modal-content {
-    transition: all 0.5s ease-in-out; /* Anima o crescimento */
-}
-
-/* Área do resultado com animação de entrada */
-#resultadoSorteio {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-    /* Quando o resultado estiver visível */
-    #resultadoSorteio.show {
-        opacity: 1;
-        max-height: 100px; /* Ajuste conforme necessário */
-    }
-
-.btn-random {
-    padding: 20px 35px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(135deg, var(--button-bg) 30%, var(--button-hover-bg) 100%);
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-}
-
-    .btn-random:hover {
-        background: linear-gradient(135deg, var(--button-hover-bg) 30%, var(--primary-text) 100%);
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .btn-random:active {
-        transform: scale(0.98);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-/* Estilização suave para os resultados */
-.resultado-sorteio, .resumo-texto {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--secondary-text);
-    background-color: var(--secondary-bg);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Começa invisível */
-    max-height: 0; /* Evita pular a tela */
-    overflow: hidden;
-    transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
-}
-
-/* Quando o resultado for exibido */
-.show-resultado {
-    opacity: 1;
-    max-height: 300px;
-}
-
-/* Footer - Responsivo e ajustável ao tema */
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 .site-footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: auto;
+    position: relative;
     font-family: 'Georgia', serif;
     font-size: 1rem;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Mantém o footer no final da página */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-.donation-text {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--primary-text);
-    margin-bottom: 15px;
-}
-
-.bible-verse {
-    font-size: 1rem;
+/* Mensagem Inspiradora */
+.footer-message {
+    font-size: 1.3rem;
     font-style: italic;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--secondary-text);
+}
+
+/* Links do Footer */
+/* Estilização aprimorada do link "Apoie o Projeto" */
+.footer-links a {
+    color: var(--button-bg);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+    /* Efeito sublinhado moderno */
+    .footer-links a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--button-bg);
+        transform: translateX(-50%) scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Efeito ao passar o mouse */
+    .footer-links a:hover {
+        color: var(--button-hover-bg);
+        transform: scale(1.05);
+    }
+
+        /* Animação do sublinhado ao passar o mouse */
+        .footer-links a:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+    /* Efeito ao clicar */
+    .footer-links a:active {
+        color: var(--primary-text);
+        transform: scale(0.98);
+    }
+
+
+.footer-copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: var(--secondary-text);
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-message {
+        font-size: 1.1rem;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* ============================= */
+/* MODAL */
+/* ============================= */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Título do Modal */
+.modal-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-text);
+    padding: 10px 0;
+}
+
+/* ============================= */
+/* BOTÃO FECHAR DO MODAL */
+/* ============================= */
+.btn-close-modal {
+    background-color: #d9534f !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    transition: background-color 0.3s ease, transform 0.2s ease !important;
+    font-size: 1rem !important;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+    .btn-close-modal:hover {
+        background-color: #c9302c !important;
+        transform: scale(1.05) !important;
+    }
+
+    .btn-close-modal:active {
+        background-color: #a72824 !important;
+        transform: scale(0.98) !important;
+    }
+
+/* ============================= */
+/* ESTILIZAÇÃO DAS RESPOSTAS (RESULTADOS DO SORTEIO) */
+/* ============================= */
+.resultado-sorteio, .resumo-texto {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
     color: var(--secondary-text);
     background-color: var(--secondary-bg);
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.qr-code-image {
-    max-width: 100%;
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Exibir corretamente os resultados quando sorteados */
+.show-resultado {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* ALINHAMENTO DOS ELEMENTOS NO MODAL */
+/* ============================= */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contêiner dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }

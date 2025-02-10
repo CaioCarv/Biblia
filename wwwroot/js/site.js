@@ -1,4 +1,4 @@
-﻿// Função para aplicar o tema
+﻿
 function setTheme(theme, element = null) {
     document.querySelectorAll('.btn-theme').forEach((btn) => {
         btn.classList.remove('active');
@@ -33,10 +33,12 @@ window.onload = function () {
     });
 
     if (!found) {
-        setTheme('default', document.querySelector('.btn-theme[data-theme="default"]'));
+        const defaultBtn = document.querySelector('.btn-theme[data-theme="default"]');
+        if (defaultBtn) {
+            setTheme('default', defaultBtn);
+        }
     }
 };
-
 
 // region Button Action
 

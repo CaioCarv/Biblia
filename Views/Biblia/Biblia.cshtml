@@ -3,30 +3,6 @@
     ViewData["Title"] = "Biblia";
 }
 
-<div class="hero-section">
-    <div class="welcome-text">
-        Bem-vindo ao seu devocional diário
-    </div>
-
-    <div class="left-title">
-        <h1 class="big-title">oSeu</h1>
-        <h1 class="big-title-2">Dev.</h1>
-    </div>
-    <div class="content-container">
-        <button class="custom-button" data-bs-toggle="modal" data-bs-target="#devocionalModal">Começar Devocional</button>
-        <p class="explanation">
-            Este projeto é uma ferramenta devocional que auxilia no sorteio de livros ou capítulos da Bíblia para leitura,
-            oferecendo inspiração diária. Ele permite sortear um livro completo,
-            um capítulo específico dentro de um livro escolhido ou até um capítulo aleatório de toda a Bíblia,
-            promovendo uma experiência dinâmica e enriquecedora para o estudo bíblico.
-        </p>
-
-        <div class="col-md-6 image-section">
-            <img src="~/images/biblia.png" alt="Bíblia Devocional">
-        </div>
-    </div>
-</div>
-
 <div class="modal fade" id="devocionalModal" tabindex="-1" aria-labelledby="devocionalModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -35,21 +11,15 @@
             </div>
             <div class="modal-body">
                 <div class="button-container">
-                    <!-- Botão para sortear apenas o livro -->
                     <button type="button" class="btn btn-random" onclick="randomizarLivro()">
                         <i class="fas fa-book"></i> SORTEAR LIVRO
                     </button>
 
-                    <!-- Botão para sortear livro e capítulo -->
                     <button type="button" class="btn btn-random" onclick="randomizarLivroCapitulo()">
                         <i class="fas fa-scroll"></i> SORTEAR LIVRO E CAPÍTULO
                     </button>
                 </div>
-
-                <!-- Exibição do Livro Sorteado -->
                 <p id="livroSorteado" class="resultado-sorteio" style="display: none;"></p>
-
-                <!-- Exibição do Resumo -->
                 <p id="resumoSorteado" class="resumo-texto" style="display: none;"></p>
             </div>
 
@@ -59,4 +29,56 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="qrCodeModalLabel">Apoie o Projeto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="donation-text">
+                    "Esta é uma oferta voluntária para apoiar este projeto, ajudando a espalhar a palavra de Deus. O dízimo pertence à sua igreja local. Se sentir no coração de contribuir, sua doação será muito bem-vinda!"
+                </p>
+
+                <blockquote class="bible-verse">
+                    <i>“Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria.”</i>
+                    <strong>— 2 Coríntios 9:7</strong>
+                </blockquote>
+
+                <img src="/images/qrCode.png" alt="QR Code Apoio" class="qr-code-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="welcome-text">
+    Bem-vindo ao seu devocional diário
+</div>
+<div class="div-geral">
+    <div class="hero-section">
+
+        <div class="left-title">
+            <h1 class="big-title">oSeu</h1>
+            <h1 class="big-title-2">Dev.</h1>
+        </div>
+        <div class="content-container">
+            <button class="custom-button" data-bs-toggle="modal" data-bs-target="#devocionalModal">Começar Devocional</button>
+            <p class="explanation">
+                Este projeto é uma ferramenta devocional que auxilia no sorteio de livros ou capítulos da Bíblia para leitura,
+                oferecendo inspiração diária. Ele permite sortear um livro completo,
+                um capítulo específico dentro de um livro escolhido ou até um capítulo aleatório de toda a Bíblia,
+                promovendo uma experiência dinâmica e enriquecedora para o estudo bíblico.
+            </p>
+
+            <div class="col-md-6 image-section">
+                <img src="~/images/biblia.png" alt="Bíblia Devocional">
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
 
