@@ -41,12 +41,40 @@
         </main>
     </div>
 
-    <!-- Rodapé -->
-    <footer class="border-top footer text-muted">
-        <div class="container text-center">
-            &copy; 2025 - Oseu
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-message">"Espalhando luz e esperança, um dia de cada vez."</p>
+            <div class="footer-links">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#qrCodeModal">Apoie o Projeto</a>
+            </div>
+            <p class="footer-copyright">&copy; 2025 OSeu Dev. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <!-- Modal para exibir o QR Code de apoio -->
+    <div class="modal fade" id="qrCodeModal" tabindex="-1" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="qrCodeModalLabel">Apoie o Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="donation-text">
+                        "Esta é uma oferta voluntária para apoiar este projeto, ajudando a espalhar a palavra de Deus. O dízimo pertence à sua igreja local. Se sentir no coração de contribuir, sua doação será muito bem-vinda!"
+                    </p>
+
+                    <blockquote class="bible-verse">
+                        <i>“Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria.”</i>
+                        <strong>— 2 Coríntios 9:7</strong>
+                    </blockquote>
+
+                    <img src="/images/qrCode.png" alt="QR Code Apoio" class="qr-code-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="~/js/site.js" asp-append-version="true"></script>

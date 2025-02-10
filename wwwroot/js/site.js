@@ -1,12 +1,14 @@
-﻿// Region Theme
-function setTheme(theme, element) {
+﻿// Função para aplicar o tema
+function setTheme(theme, element = null) {
     document.querySelectorAll('.btn-theme').forEach((btn) => {
         btn.classList.remove('active');
         btn.classList.add('inactive');
     });
 
-    element.classList.remove('inactive');
-    element.classList.add('active');
+    if (element) {
+        element.classList.remove('inactive');
+        element.classList.add('active');
+    }
 
     document.documentElement.classList.remove('theme-blue', 'theme-pink');
     if (theme === 'blue') {
@@ -14,6 +16,7 @@ function setTheme(theme, element) {
     } else if (theme === 'pink') {
         document.documentElement.classList.add('theme-pink');
     }
+
     localStorage.setItem('theme', theme);
 }
 
@@ -21,14 +24,20 @@ window.onload = function () {
     const savedTheme = localStorage.getItem('theme') || 'default';
     const buttons = document.querySelectorAll('.btn-theme');
 
+    let found = false;
     buttons.forEach((btn) => {
         if (btn.getAttribute("data-theme") === savedTheme) {
             setTheme(savedTheme, btn);
+            found = true;
         }
     });
+
+    if (!found) {
+        setTheme('default', document.querySelector('.btn-theme[data-theme="default"]'));
+    }
 };
 
-// endregion Theme
+
 // region Button Action
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -57,46 +66,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
-// Função para sortear um livro
 function randomizarLivro() {
     fetch("/biblia/sortearLivro")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Erro ao buscar livro");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log("Livro recebido:", data); // Log para depuração
+            console.log("Livro recebido:", data); 
             let livroSorteado = document.getElementById("livroSorteado");
+            let resumoSorteado = document.getElementById("resumoSorteado");
 
-            if (livroSorteado && data && data.nome) {
+            if (livroSorteado && resumoSorteado) {
                 livroSorteado.innerText = `📖 Livro: ${data.nome}`;
                 livroSorteado.style.display = "block";
                 livroSorteado.classList.add("show-resultado");
                 buscarResumo(data.id);
-            } else {
-                console.error("Elemento livroSorteado não encontrado ou dados inválidos.");
             }
         })
         .catch(error => console.error("Erro ao sortear livro:", error));
 }
 
-// Função para buscar o resumo do livro sorteado
 function buscarResumo(id) {
     fetch(`/biblia/buscarResumo/${id}`)
         .then(response => response.json())
         .then(data => {
-            console.log("Resumo recebido:", data); // Log para depuração
+            console.log("Resumo recebido:", data);
             let resumoSorteado = document.getElementById("resumoSorteado");
 
-            if (resumoSorteado && data.resumo) {
-                resumoSorteado.innerText = `📜 Resumo do livro: ${data.resumo}`;
+            if (resumoSorteado) {
+                resumoSorteado.innerText = `📜 Resumo: ${data.resumo}`;
                 resumoSorteado.style.display = "block";
                 resumoSorteado.classList.add("show-resultado");
-            } else {
-                console.error("Elemento resumoSorteado não encontrado ou resumo inválido.");
             }
         })
         .catch(error => console.error("Erro ao buscar resumo:", error));
@@ -104,17 +102,18 @@ function buscarResumo(id) {
 
 function randomizarLivroCapitulo() {
     fetch("/biblia/sortearLivroComCapitulo")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Erro ao buscar livro e capítulo");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            document.getElementById("livroSorteado").innerText = `📖 Livro: ${data.nome} - 📜 Capítulo: ${data.capitulo}`;
-            document.getElementById("livroSorteado").style.display = "block";
+            console.log("Livro e capítulo recebidos:", data);
+            let livroSorteado = document.getElementById("livroSorteado");
+            let resumoSorteado = document.getElementById("resumoSorteado");
 
-            buscarResumo(data.id);
+            if (livroSorteado && resumoSorteado) {
+                livroSorteado.innerText = `📖 Livro: ${data.nome} - 📜 Capítulo: ${data.capitulo}`;
+                livroSorteado.style.display = "block";
+                livroSorteado.classList.add("show-resultado");
+                buscarResumo(data.id);
+            }
         })
         .catch(error => console.error("Erro ao sortear livro e capítulo:", error));
 }

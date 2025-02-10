@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\images\\biblia.png"
     },
     {
+      "Id": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\images\\qrCode.png",
+      "PackagePath": "staticwebassets\\images\\qrCode.png"
+    },
+    {
       "Id": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

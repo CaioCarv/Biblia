@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B/Ll74GNnHOz9qQFqfLXtqhMi+2M7mD/nB21nM+qojc=",
+  "Hash": "xLS9BC+L69XjITmEZFjRqcQtCvW+ijB8NO/6iNM+Bco=",
   "Source": "Biblia",
   "BasePath": "_content/Biblia",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\biblia.png"
+    },
+    {
+      "Identity": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\images\\qrCode.png",
+      "SourceId": "Biblia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\",
+      "BasePath": "_content/Biblia",
+      "RelativePath": "images/qrCode.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\qrCode.png"
     },
     {
       "Identity": "C:\\Users\\caiof\\source\\repos\\ProjetoBiblia\\Biblia\\Biblia\\wwwroot\\js\\site.js",
